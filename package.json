@@ -1,0 +1,37 @@
+{
+  "name": "carga-dados",
+  "version": "1.0.1",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "author": {
+    "email": "bruno.bach@cbyk.com.br",
+    "name": "Bruno Bach",
+    "url": "http://github.com/brunobach"
+  },
+  "scripts": {
+    "start": "ts-node ./src/index.ts",
+    "build": "tsc && pkg ."
+  },
+  "bin": "build/src/index.js",
+  "pkg": {
+    "scripts": "build/**/*.js",
+    "assets": "build/**/*",
+    "targets": [
+      "node14-linux-x64",
+      "node14-win-x64"
+    ],
+    "outputPath": "dist"
+  },
+  "dependencies": {
+    "chokidar": "^3.5.2",
+    "fastq": "^1.13.0",
+    "fs-extra": "^10.0.0",
+    "json-csv": "^4.0.2",
+    "mongodb": "^4.1.2"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  }
+}
